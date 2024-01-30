@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/public/imo-vn-co-ltd.png";
-import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
+import Logo from "@/public/imo-academy.png";
+import {AiOutlineAlignRight, AiOutlineClose} from "react-icons/ai";
 import { useState } from "react";
 
 export default function Header(){
@@ -13,41 +13,45 @@ export default function Header(){
     }
     return(
         <header>
-          <nav className="fixed w-full shadow-xl">
-            <div className="container flex justify-between items-center mx-auto">
-              <Link href={'/'}>
+          <nav className="fixed w-full shadow-xl bg-teal-700">
+            <div className="container flex justify-between items-center mx-auto px-3">
+              <Link href={'/'} className="py-2">
                 <Image src={Logo} alt='imo-vn-brand-name' width={'180'} className='cursor-pointer' priority />
               </Link>
               <div className="hidden sm:flex">
-                <ul className="sm:flex">
+                <ul className="sm:flex text-white">
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">Trang chủ</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Trang chủ</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">Giới thiệu</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Giới thiệu</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">Đào tạo</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Đào tạo</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">FAQs</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">FAQs</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">Blog</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Blog</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li className="ml-10 uppercase hover:text-red-500 text-md font-semibold">Liên hệ</li>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Video</li>
+                  </Link>
+
+                  <Link href={'/'}>
+                    <li className="ml-10 uppercase hover:text-teal-300 text-sm font-semibold">Liên hệ</li>
                   </Link>
                 </ul>
               </div>
 
-              <div onClick={HandleNav}  className="md:hidden cursor-pointer pl-24">
-                <AiOutlineMenu size={28}/>
+              <div onClick={HandleNav}  className="md:hidden cursor-pointer pl-24 text-white">
+                <AiOutlineAlignRight size={23}/>
               </div>
             </div>
 
@@ -58,33 +62,37 @@ export default function Header(){
             }>
               <div className="flex w-full items-center justify-end">
                 <div onClick={HandleNav} className="cursor-pointer">
-                  <AiOutlineClose size={28} className="text-white"/>
+                  <AiOutlineClose size={23} className="text-white"/>
                 </div>
             </div>
             <div className="flex-col py-4 h-screen">
                 <ul>
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">Trang chủ</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Trang chủ</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">Giới thiệu</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Giới thiệu</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">Đào tạo</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Đào tạo</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">FAQs</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">FAQs</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">Blog</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Blog</li>
                   </Link>
 
                   <Link href={'/'}>
-                    <li onClick={()=>setMenuOpen(false)} className="py-3 cursor-pointer text-white uppercase font-semibold">Liên hệ</li>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Video</li>
+                  </Link>
+
+                  <Link href={'/'}>
+                    <li onClick={()=>setMenuOpen(false)} className="py-3 text-sm cursor-pointer text-white uppercase font-semibold">Liên hệ</li>
                   </Link>
                 </ul>
               </div>
